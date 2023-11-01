@@ -1,9 +1,28 @@
-import React from 'react';
-import './cards.css'; // Create a separate CSS file for styling
+import React, { useEffect, useState } from 'react';
+import './cards.css'; 
 
 const Footer = () => {
+  const [showFooter, setShowFooter] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.innerHeight + window.scrollY >= document.body.offsetHeight
+      ) {
+        setShowFooter(true);
+      } else {
+        setShowFooter(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <footer className="footer">
+    <footer className={`footer ${showFooter ? 'show' : ''}`}>
       <div className="contact-info">
         <p>Contact: +254202739893/2739894/2739896</p>
         <p>Address: Maktaba Kuu Building, Upper Hill</p>
