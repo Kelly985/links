@@ -12,6 +12,7 @@ function App() {
 
       <div className='space-between'></div>
       <CardList /> 
+      <div className='space-between2'></div>
 
       <Footer />
     </div>
