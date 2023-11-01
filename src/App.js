@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import CardList from './cards';
+import Footer from './footer';
+import Logo from './logo';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Logo /> 
+      <h1 className='app-title'>WELCOME TO KNLS LINKS</h1> 
+
+      <div className='space-between'></div>
+      <CardList /> 
+
+      <Footer />
     </div>
   );
 }
