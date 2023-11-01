@@ -90,25 +90,6 @@ html, body {
 
 
 
-  @media (max-width: 768px) {
-    .card {
-      width: 150px; 
-    }
-    .card-icon img {
-      max-width: 80px; 
-    }
-  }
-  
- 
-  @media (max-width: 480px) {
-    .card {
-      width: 100px; 
-    }
-    .card-icon img {
-      max-width: 60px; 
-    }
-  }
-
   .search-bar {
     width: 200px; 
     padding: 5px;
@@ -154,4 +135,46 @@ html, body {
 
 .footer a.google-maps-link:hover {
   text-decoration: underline; 
+}
+
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+
+  .app-title {
+    margin-top: 90px;
+  }
+
+  .card {
+    width: 150px;
+  }
+
+  .card-icon img {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 5px;
+  }
+
+  .app-title {
+    margin-top: 90px;
+  }
+
+  .card {
+    width: 100px;
+  }
+
+  .card-icon img {
+    max-width: 60px;
+  }
+
+  .search-bar {
+    width: 100px;
+  }
 }
